@@ -55,6 +55,9 @@ jobs:
           ref: ${{ github.event.inputs.sha }}
           fetch-depth: 1
 
+      - name: Cleanup storage
+        uses: rokibhasansagar/slimhub_actions@main
+
       - name: Enable proxy on container
         shell: bash
         run: |
